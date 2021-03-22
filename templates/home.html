@@ -1,0 +1,11 @@
+{%extends 'base.html'%} 
+{%block title%}Home{%endblock%}
+{%block content%}
+<h4><br><a href="/sign" >Sign the petition</a><br>
+ <h2>Already we have got {{signs}} signs.</h2><br> 
+    {% for user in userinfo%}
+  <p>ID {{user.id}} : {{user.user_name}} {{user.sur_name}} <a href="/remove/{{user.id}}">Remove</a></p> 
+  
+   {%endfor%}
+</h4>
+{%endblock%}
